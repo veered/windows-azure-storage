@@ -148,7 +148,7 @@ add_action('delete_attachment', 'windows_azure_storage_delete_attachment');
  */ 
 function check_prerequisite()
 {
-    $windowsAzureFilePath = "../wp-content/plugins/windows-azure-storage/library/WindowsAzure/WindowsAzure.php";
+    $windowsAzureFilePath = __DIR__ . "/library/WindowsAzure/WindowsAzure.php";
         if ((file_exists($windowsAzureFilePath) === true) && (is_readable($windowsAzureFilePath) === true)) {
         return;
     }
